@@ -6,5 +6,10 @@ pipeline {
         sleep 12
       }
     }
+    stage('Speak') {
+      steps {
+        echo 'Hi'
+      }
+    }
   }
 }
