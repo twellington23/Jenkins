@@ -2,6 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Step 1') {
+      agent any
       steps {
         echo 'Jenkins file running'
       }
