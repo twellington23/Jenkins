@@ -7,8 +7,17 @@ pipeline {
       }
     }
     stage('Speak') {
-      steps {
-        echo 'Hi'
+      parallel {
+        stage('Speak') {
+          steps {
+            echo 'Hi'
+          }
+        }
+        stage('') {
+          steps {
+            echo 'Whats good'
+          }
+        }
       }
     }
   }
