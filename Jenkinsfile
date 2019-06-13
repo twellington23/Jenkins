@@ -7,17 +7,13 @@ pipeline {
       }
     }
     stage('Speak') {
-      parallel {
-        stage('Speak') {
-          steps {
-            echo 'Hi'
-          }
-        }
-        stage('') {
-          steps {
-            echo 'Whats good'
-          }
-        }
+      steps {
+        echo 'Hi'
+      }
+    }
+    stage('') {
+      steps {
+        retry(count: 10)
       }
     }
   }
