@@ -1,9 +1,9 @@
 pipeline {
   agent none
   stages {
-    stage('Build') {
+    stage('Sleep') {
       steps {
-        sleep 12
+        sleep 10
       }
     }
     stage('Speak') {
@@ -11,9 +11,9 @@ pipeline {
         echo 'Hi'
       }
     }
-    stage('') {
+    stage('Sleep Again') {
       steps {
-        retry(count: 10)
+        sleep 5
       }
     }
   }
